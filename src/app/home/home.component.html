@@ -3,6 +3,8 @@
     <h1>
         Produtos da minha loja
     </h1>
+
+    
     <table class="table table-striped">
         <thead>
             <tr>
@@ -11,22 +13,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Caneta</td>
-                <td>R$ 1,00</td>
+            <tr *ngFor="let produto of produtos">
+                <td>{{produto.descricao}}</td>
+                <td>R$ {{produto.valor | number: '.2'}}</td>
             </tr>
-            <tr>
-                <td>Caderno</td>
-                <td>R$ 5,00</td>
-            </tr> 
-            <tr>
-                <td>Borracha</td>
-                <td>R$ 0,50</td>
-            </tr> 
-            <tr>
-                <td>Lapis</td>
-                <td>R$ 0,85</td>
-            </tr>      
+            
         </tbody>
+            
     </table>
 </div>
